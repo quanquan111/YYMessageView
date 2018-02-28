@@ -1,14 +1,19 @@
-//
-//  YYMessageView.h
-//  Demo_Message
-//
-//  Created by shifangyuan on 2017/3/6.
-//  Copyright © 2017年 石方圆. All rights reserved.
-//
+/*!
+ 
+ @header YYMessageView.h
+ 
+ @abstract 源代码文件基本描述
+ 
+ @author Created by shifangyuan on 16/8/25.
+ 
+ @version 1.0.0 16/8/25 Creation
+ 
+ @  Copyright © 2016年 石方圆. All rights reserved.
+ 
+ */
+
 
 #import <UIKit/UIKit.h>
-
-@protocol YYMessageViewDelegate;
 
 @interface YYMessageView : UIView
 
@@ -16,11 +21,6 @@
  *回调block
  */
 @property (strong, nonatomic) void(^operationBlock)(void);
-
-/**
- delegate
- */
-@property (weak, nonatomic) id<YYMessageViewDelegate> delegate;
 
 /*!
  *操作按钮 主题颜色
@@ -63,6 +63,16 @@
 @property (strong, nonatomic) NSString *actionButtonTitle;
 
 /**
+ 标题大小
+ */
+@property (assign, nonatomic) CGFloat fontSize;
+
+/**
+ *图片的高度（如果设置此值宽度必将自适应，不设置则为固定宽高，初始化宽高在图片视图懒加载方法里面进行赋值）
+ */
+@property (assign, nonatomic) CGFloat imageHeight;
+
+/**
  初始化默认设置
  */
 -(void)setupDefaultValues;
@@ -92,13 +102,15 @@
  */
 -(void)showMessageWithImageNamed:(NSString *)imageNamed title:(NSString *)title detail:(NSString *)detail;
 
+/**
+ 自定义数据展示方法 创建实例时调用的方法
+
+ @param imageNamed 显示的图片名字
+ @param title 标题
+ @param detail 详细说明
+ @param operation 操作按钮文字 可为空
+ */
+-(void)showMessageWithImageNamed:(NSString *)imageNamed title:(NSString *)title detail:(NSString *)detail operation:(NSString *)operation;
+
 @end
 
-
-
-@protocol YYMessageViewDelegate <NSObject>
-@optional
-///网络连接失败 点击按钮的代理方法 实例化YYMessageView时使用的代理方法
--(void)yyMessageViewTouchAction;
-//-(void)yyMessageViewWasHidden:(YYMessageView *)messageView;
-@end

@@ -28,7 +28,7 @@
         }
             break;
         case 2: {
-            [self.view showMessageByImageNamed:@"msg_wait"
+            [self.view showMessageByImageNamed:@"data_not"
                                          title:@"暂时没有数据"
                                         detail:@"请等待片刻在进行查看"];
         }
