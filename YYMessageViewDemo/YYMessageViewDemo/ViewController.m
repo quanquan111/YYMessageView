@@ -34,7 +34,7 @@
         }
             break;
         case 3:{
-            __weak typeof(self) weakSelf = self;
+            __weak typeof(self) weakSelf = self; 
             [self.view showMessageByImageNamed:@"data_not"
                                          title:@"暂时没有数据"
                                         detail:@"请等待片刻再进行查看"

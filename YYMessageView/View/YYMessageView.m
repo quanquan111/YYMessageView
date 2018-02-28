@@ -30,7 +30,7 @@
     if (self) {
         [self setupDefaultValues];
     }
-    return self;
+    return self; 
 }
 
 -(instancetype)init
