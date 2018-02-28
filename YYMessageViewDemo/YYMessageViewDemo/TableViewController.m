@@ -30,7 +30,8 @@
     dataArray = @[
                   @{@"title":@"无数据默认展示",@"type":@(1)},
                   @{@"title":@"无数据自定义展示",@"type":@(2)},
-                  @{@"title":@"无网络连接默认展示",@"type":@(3)}];
+                  @{@"title":@"带操作按钮的自定义展示",@"type":@(3)},
+                  @{@"title":@"无网络连接默认展示",@"type":@(4)}];
 }
 
 - (void)didReceiveMemoryWarning {

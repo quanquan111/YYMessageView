@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YYMessageView"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "简单方便的通用提示视图"
 
   # This description is used to generate tags and improve search results.
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #
 
   #  s.source       = { :git => "https://github.com/quanquan111/YYMessageView.git" }
-  s.source       = { :git => "https://github.com/quanquan111/YYMessageView.git", :tag => "{s.version}" }
+  s.source       = { :git => "https://github.com/quanquan111/YYMessageView.git", :tag => "0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

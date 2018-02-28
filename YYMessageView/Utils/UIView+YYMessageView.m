@@ -172,6 +172,22 @@
                                             detail:detail];
 }
 
+-(void)showMessageByImageNamed:(NSString *)imageNamed title:(NSString *)title detail:(NSString *)detail operation:(NSString *)operation block:(OperationBlock)block
+{
+    [self.yy_messageView setupDefaultValues];
+    
+    [self.yy_messageView showMessageWithImageNamed:imageNamed
+                                             title:title
+                                            detail:detail
+                                         operation:operation];
+    
+    [self.yy_messageView setOperationBlock:^{
+        if (block) {
+            block();
+        }
+    }];
+}
+
 -(void)hiddenMessageView
 {
     YYMessageView *messageView = [self yy_messageViewAssociated];

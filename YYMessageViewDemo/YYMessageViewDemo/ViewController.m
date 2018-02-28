@@ -30,13 +30,24 @@
         case 2: {
             [self.view showMessageByImageNamed:@"data_not"
                                          title:@"暂时没有数据"
-                                        detail:@"请等待片刻在进行查看"];
+                                        detail:@"请等待片刻再进行查看"];
         }
             break;
         case 3:{
             __weak typeof(self) weakSelf = self;
+            [self.view showMessageByImageNamed:@"data_not"
+                                         title:@"暂时没有数据"
+                                        detail:@"请等待片刻再进行查看"
+                                     operation:@"返 回"
+                                         block:^{
+                                             [weakSelf.navigationController popViewControllerAnimated:YES];
+                                         }];
+        }
+            break;
+        case 4:{
+            __weak typeof(self) weakSelf = self;
             [self.view showMessageNotNetwork:^{
-                [weakSelf csAction];
+                [weakSelf requestData];
             }];
         }
             break;
@@ -46,14 +57,13 @@
     }
 }
 
--(void)csAction
+-(void)requestData
 {
     __weak typeof(self) weakSelf = self;
-    NSLog(@"start do something");
     [self.view hiddenMessageView];
+    //此处模拟网络请求 并且 请求出来的结果是没有数据
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [weakSelf.view showMessageNotData];
-        NSLog(@"end do something");
     });
 }
 

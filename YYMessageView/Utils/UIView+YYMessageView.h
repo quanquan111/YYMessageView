@@ -37,6 +37,17 @@ typedef void(^OperationBlock)(void);
 -(void)showMessageByImageNamed:(NSString *)imageNamed title:(NSString *)title detail:(NSString *)detail;
 
 /**
+ 自定义数据展示方法 可以带操作按钮
+ 
+ @param imageNamed 需展示的图片名字
+ @param title 提示文字
+ @param detail 详细文字
+ @param operation 操作按钮标题 为空时不显示操作按钮
+ @param block 操作按钮回调
+ */
+-(void)showMessageByImageNamed:(NSString *)imageNamed title:(NSString *)title detail:(NSString *)detail operation:(NSString *)operation block:(OperationBlock)block;
+
+/**
  隐藏视图，停止服务
  */
 -(void)hiddenMessageView;
