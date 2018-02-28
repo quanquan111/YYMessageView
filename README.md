@@ -24,28 +24,27 @@ pod 'YYMessageView'
                        
 自定义展示视图 (带操作按钮)
 __weak typeof(self) weakSelf = self;
-[self.view showMessageByImageNamed:@"data_not"
-                             title:@"暂时没有数据"
-                            detail:@"请等待片刻再进行查看"
-                         operation:@"返回"
-                             block:^{
-                                   //do something ..
-                             }];
+[view showMessageByImageNamed:@"data_not"
+                        title:@"暂时没有数据"
+                       detail:@"请等待片刻再进行查看"
+                    operation:@"返回"
+                        block:^{
+                              //do something ..
+                        }];
                              
 网络异常默认处理
  __weak typeof(self) weakSelf = self;
-[self.view showMessageNotNetwork:^{
+[view showMessageNotNetwork:^{
       [weakSelf requestData];
 }];
 
 -(void)requestData
 {
-    [self.view hiddenMessageView];
+    [view hiddenMessageView];
     
     //此处模拟网络请求成功 并且 没有获取到数据的情况
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [weakSelf.view showMessageNotData];
-        NSLog(@"end do something");
+        [view showMessageNotData];
     });
 }
 
