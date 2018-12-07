@@ -258,7 +258,7 @@
 				TargetAttributes = {
 					2B78DC4B1E6FD10C00CFFCC1 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6H522BZF3J;
+						DevelopmentTeam = 6U2RM95S5X;
 						ProvisioningStyle = Automatic;
 					};
 					2B78DC641E6FD10C00CFFCC1 = {
@@ -478,7 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6H522BZF3J;
+				DEVELOPMENT_TEAM = 6U2RM95S5X;
 				INFOPLIST_FILE = YYMessageViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -491,7 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6H522BZF3J;
+				DEVELOPMENT_TEAM = 6U2RM95S5X;
 				INFOPLIST_FILE = YYMessageViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -565,6 +565,7 @@
 				2B78DC7B1E6FD10C00CFFCC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B78DC7C1E6FD10C00CFFCC1 /* Build configuration list for PBXNativeTarget "YYMessageViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -573,6 +574,7 @@
 				2B78DC7E1E6FD10C00CFFCC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B78DC7F1E6FD10C00CFFCC1 /* Build configuration list for PBXNativeTarget "YYMessageViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -581,6 +583,7 @@
 				2B78DC811E6FD10C00CFFCC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

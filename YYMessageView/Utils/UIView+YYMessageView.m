@@ -34,7 +34,7 @@
         
         self.yy_messageView = messageView;
         
-        self.yy_messageView.backgroundColor = [UIColor whiteColor];
+        self.yy_messageView.backgroundColor = self.backgroundColor;
         
         [self setYy_messageView:messageView];
     }
@@ -156,7 +156,7 @@
     
     [self.yy_messageView showMessageWithNotNetwork];
     
-    [self.yy_messageView setOperationBlock:^{
+    [self.yy_messageView setCompleteBlock:^{
         if (block) {
             block();
         }
@@ -181,10 +181,8 @@
                                             detail:detail
                                          operation:operation];
     
-    [self.yy_messageView setOperationBlock:^{
-        if (block) {
-            block();
-        }
+    [self.yy_messageView setCompleteBlock:^{
+        if (block) { block(); }
     }];
 }
 

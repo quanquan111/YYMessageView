@@ -20,7 +20,7 @@
 /*!
  *回调block
  */
-@property (strong, nonatomic) void(^operationBlock)(void);
+@property (strong, nonatomic) void(^completeBlock)(void);
 
 /*!
  *操作按钮 主题颜色
